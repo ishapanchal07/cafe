@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chai Sutta Bar</title>
+<style>
+/* ===== GLOBAL ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Poppins, sans-serif; background: #111; color: #fff; }
+section { padding: 60px 7%; }
+h1, h2 { letter-spacing: 1px; }
+
+/* HEADER */
+header { position: fixed; top: 0; left: 0; width: 100%; padding: 20px 7%; background: rgba(0,0,0,0.7); display: flex; justify-content: space-between; align-items: center; z-index: 1000; backdrop-filter: blur(6px); }
+header h1 { color: #ffcc00; font-size: 28px; font-weight: 700; }
+header nav a { margin-left: 25px; color: #fff; text-decoration: none; font-size: 16px; transition: .3s; }
+header nav a:hover { color: #ffcc00; }
+
+/* HERO */
+.hero { height: 100vh; background: url('https://t3.ftcdn.net/jpg/02/23/21/88/360_F_223218801_ubyiD0QDsLtZha42O6hl62BdtsTS1LGl.jpg') center/cover no-repeat; display: flex; justify-content: center; align-items: center; text-align: center; animation: fadeIn 1.2s ease; }
+.hero h2 { font-size: 55px; color: #ffcc00; text-shadow: 3px 3px 10px #000; }
+.hero p { font-size: 20px; margin-top: 15px; }
+
+/* MENU */
+.menu-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.menu-box { background: #222; padding: 25px; border-radius: 15px; border: 1px solid #333; transition: .3s; }
+.menu-box:hover { transform: translateY(-7px); border-color: #ffcc00; }
+.menu-box h3 { color: #ffcc00; margin-bottom: 10px; }
+.menu-item { display: flex; justify-content: space-between; padding: 5px 0; font-size: 15px; border-bottom: 1px dashed #444; }
+
+/* CONTACT */
+.contact { text-align: center; }
+.contact button { padding: 12px 35px; background: #ffcc00; border: none; border-radius: 30px; font-size: 18px; cursor: pointer; transition: .3s; }
+.contact button:hover { background: #ffdd33; }
+
+/* ANIMATION */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* RESPONSIVE */
+@media(max-width: 768px){ .hero h2 { font-size: 40px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Chai Sutta Bar</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h2>Welcome to Chai Sutta Bar</h2>
+    <p>Fresh bites • Cool drinks • Perfect vibes</p>
+  </div>
+</section>
+
+<section id="menu">
+  <h2 style="text-align:center; color:#ffcc00; margin-bottom: 30px;">Our Menu</h2>
+
+  <div class="menu-container">
+
+    <div class="menu-box">
+      <h3>Bites</h3>
+      <div class="menu-item"><span>Maska Bun</span><span>₹15</span></div>
+      <div class="menu-item"><span>Plain Garlic Bread</span><span>₹40</span></div>
+      <div class="menu-item"><span>Cheese Garlic Bread</span><span>₹60</span></div>
+      <div class="menu-item"><span>French Fries</span><span>₹50</span></div>
+    </div>
+
+    <div class="menu-box">
+      <h3>Sandwiches</h3>
+      <div class="menu-item"><span>Corn Masala Sandwich</span><span>₹60</span></div>
+      <div class="menu-item"><span>Veg Cheese Sandwich</span><span>₹70</span></div>
+      <div class="menu-item"><span>Veg Masala Sandwich</span><span>₹60</span></div>
+      <div class="menu-item"><span>Cheese Chilli Sandwich</span><span>₹80</span></div>
+    </div>
+
+    <div class="menu-box">
+      <h3>Maggi</h3>
+      <div class="menu-item"><span>Plain Maggi</span><span>₹30</span></div>
+      <div class="menu-item"><span>Masala Maggi</span><span>₹40</span></div>
+      <div class="menu-item"><span>Cheese Maggi</span><span>₹60</span></div>
+    </div>
+
+    <div class="menu-box">
+      <h3>Milkshakes</h3>
+      <div class="menu-item"><span>Chocolate Shake</span><span>₹75</span></div>
+      <div class="menu-item"><span>Oreo Shake</span><span>₹85</span></div>
+      <div class="menu-item"><span>KitKat Shake</span><span>₹95</span></div>
+      <div class="menu-item"><span>Vanilla Shake</span><span>₹70</span></div>
+    </div>
+
+    <div class="menu-box">
+      <h3>Mojito</h3>
+      <div class="menu-item"><span>Classic Mojito</span><span>₹60</span></div>
+      <div class="menu-item"><span>Blue Mojito</span><span>₹70</span></div>
+      <div class="menu-item"><span>Green Apple Mojito</span><span>₹70</span></div>
+    </div>
+
+    <div class="menu-box">
+      <h3>Ice Tea</h3>
+      <div class="menu-item"><span>Lemon Ice Tea</span><span>₹55</span></div>
+      <div class="menu-item"><span>Peach Ice Tea</span><span>₹65</span></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 style="color:#ffcc00; margin-bottom:20px;">Contact Us</h2>
+  <p>Visit our cafe or call us for orders.</p>
+  <p style="margin-top:10px;">📞 +91 7405157511</p>
+  <button>Order Now</button>
+</section>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.menu-box').forEach(box => {
+    const rect = box.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 50){ box.style.opacity = 1; box.style.transform = 'translateY(0)'; }
+  });
+});
+</script>
+
+</body>
+</html>
