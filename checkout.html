@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chai Sutta Bar — Checkout</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">Chai Sutta Bar</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="checkout.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section checkout-section">
+      <h2 class="section-title">Your Cart</h2>
+      <div id="cart-container" class="cart-container">
+        <!-- cart items will be rendered here -->
+      </div>
+
+      <div class="checkout-summary">
+        <div class="address-block">
+          <label for="address">Delivery address</label>
+          <textarea id="address" placeholder="Enter delivery address"></textarea>
+        </div>
+        <div class="summary-block">
+          <p>Subtotal: <strong id="subtotal">₹0</strong></p>
+          <p>Delivery: <strong id="delivery">₹20</strong></p>
+          <p>Total: <strong id="total">₹0</strong></p>
+          <button id="place-order" class="btn">Place Order</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year3"></span> Chai Sutta Bar</small>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+  <script>
+    document.getElementById('year3').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

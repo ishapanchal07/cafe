@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chai Sutta Bar — Menu</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-    <h1> this is menu page</h1>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">Chai Sutta Bar</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="checkout.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section">
+      <h2 class="section-title">Our Menu</h2>
+
+      <div class="filters" id="filters">
+        <button data-filter="all" class="filter active">All</button>
+        <button data-filter="bites" class="filter">Bites</button>
+        <button data-filter="sandwich" class="filter">Sandwiches</button>
+        <button data-filter="maggi" class="filter">Maggi</button>
+        <button data-filter="pizza" class="filter">Pizza</button>
+        <button data-filter="burger" class="filter">Burgers</button>
+        <button data-filter="roll" class="filter">Rolls</button>
+        <button data-filter="hot" class="filter">Hot Drinks</button>
+        <button data-filter="cold" class="filter">Cold Drinks</button>
+        <button data-filter="shake" class="filter">Shakes</button>
+        <button data-filter="mojito" class="filter">Mojito</button>
+        <button data-filter="dessert" class="filter">Desserts</button>
+      </div>
+
+      <div id="product-grid" class="card-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year2"></span> Chai Sutta Bar</small>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
 </body>
 </html>
