@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Chai Sutta Bar — Home</title>
   <link rel="stylesheet" href="./style.css" />
+  <script src="script.js"></script>
+
 </head>
 <body>
   <header class="site-header">
@@ -16,6 +18,8 @@
         <a href="checkout.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
       </nav>
       <button class="mobile-toggle" aria-label="toggle menu">☰</button>
+      <!-- <button onclick="addToCart(`${item.id}`)" class="add-btn">Add to Cart</button> -->
+
     </div>
   </header>
 
@@ -57,7 +61,7 @@
     </div>
   </footer>
 
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
   <script>
     // small init for index page
     document.getElementById('year').textContent = new Date().getFullYear();
